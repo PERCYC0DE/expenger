@@ -26,19 +26,19 @@ const diccionarioIconos = {
   suscripciones: IconoSuscripciones,
 };
 
-export const Expense = ({ gasto, setGastoEditar }) => {
+export const Expense = ({ gasto, setGastoEditar, eliminarGasto }) => {
   const { categoria, nombre, cantidad, id, fecha } = gasto;
 
   const leadingActions = () => (
     <LeadingActions>
-      <SwipeAction onClick={() => setGastoEditar(gasto)}>Editar</SwipeAction>
+      <SwipeAction onClick={() => setGastoEditar(gasto)} destructive={true}>
+        Editar
+      </SwipeAction>
     </LeadingActions>
   );
   const trailingActions = () => (
     <TrailingActions>
-      <SwipeAction onClick={() => console.log("Eliminar")}>
-        Eliminar
-      </SwipeAction>
+      <SwipeAction onClick={() => eliminarGasto(id)}>Eliminar</SwipeAction>
     </TrailingActions>
   );
 

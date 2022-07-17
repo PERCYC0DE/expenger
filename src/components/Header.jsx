@@ -4,6 +4,7 @@ import { NewBudget } from "./NewBudget";
 
 export const Header = ({
   gastos,
+  setGastos,
   budget,
   setBudget,
   isValidBudget,
@@ -14,7 +15,13 @@ export const Header = ({
       <h1>Expenger</h1>
 
       {isValidBudget ? (
-        <ControlBudget gastos={gastos} budget={budget} />
+        <ControlBudget
+          gastos={gastos}
+          setGastos={setGastos}
+          budget={budget}
+          setBudget={setBudget}
+          setIsValidBudget={setIsValidBudget}
+        />
       ) : (
         <NewBudget
           budget={budget}
