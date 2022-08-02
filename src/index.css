@@ -159,7 +159,6 @@ header h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     transform: translateY(5rem);
 }
 .dos-columnas {
@@ -183,7 +182,7 @@ header h1 {
 }
 .formulario input[type="text"].nuevo-presupuesto, 
 .formulario input[type="number"].nuevo-presupuesto {
-    font-size: 2.8rem;
+    /* font-size: 2.8rem; */
     text-align: center;
 }
 

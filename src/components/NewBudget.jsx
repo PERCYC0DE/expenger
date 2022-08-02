@@ -25,6 +25,7 @@ export const NewBudget = ({ budget, setBudget, setIsValidBudget }) => {
             placeholder="Añade tu presupuesto"
             value={budget}
             onChange={(e) => setBudget(Number(e.target.value))}
+            onFocus={(e) => (e.target.value = "")}
           />
         </div>
         <input type="submit" value="Añadir" />

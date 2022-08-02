@@ -33,6 +33,7 @@ export const Modal = ({
     setTimeout(() => {
       setModal(false);
     }, 200);
+    console.log("Cerrando Modal");
   };
 
   const handleSubmit = (e) => {
@@ -51,13 +52,11 @@ export const Modal = ({
 
   return (
     <div className="modal">
-      <div className="cerrar-modal">
-        <img
-          src={CloseBtn}
-          alt="Boton cerrar modal"
-          onClick={handleHiddeModal}
-        />
+      <div className="cerrar-modal" onClick={handleHiddeModal}>
+        <img src={CloseBtn} alt="Boton cerrar modal" />
       </div>
+      <p>X</p>
+
       <form
         action=""
         className={`formulario ${animatedModal ? "animar" : "cerrar"}`}
@@ -83,6 +82,7 @@ export const Modal = ({
             id="quantity"
             value={cantidad}
             onChange={(e) => setCantidad(Number(e.target.value))}
+            onFocus={(e) => (e.target.value = "")}
           />
         </div>
         <div className="campo">
