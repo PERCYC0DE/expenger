@@ -1,3 +1,8 @@
-# expenger
+# Expenger
+Frontend application for expense control
 
-Application to control expenses
+## Technologies
+- React
+
+## Notes
+The data is saved in the LocalStorage
